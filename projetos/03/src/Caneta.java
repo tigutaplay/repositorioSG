@@ -6,7 +6,7 @@ public class Caneta {
     boolean tampada;
 
     void estado() {
-        System.out.println("Modelo: " + this.modelo);
+        System.out.println("Modelo: teste" + this.modelo);
         System.out.println("Uma caneta " + this.cor);
         System.out.println("Ponta: " + this.ponta);
         System.out.println("Carga: " + this.carga);
