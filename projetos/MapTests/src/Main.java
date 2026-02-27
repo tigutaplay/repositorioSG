@@ -1,12 +1,15 @@
-import java.util.HashMap;
-import java.util.Properties;
-import java.util.TreeMap;
+import java.util.*;
 
 public class Main {
     private static Properties map;
 
     public static void main(String[] args) {
-        map.put("Thiago", 20);
+
+        HashMap<String, Integer> nomes = new LinkedHashMap<>();
+
+        Arrays.fill(new HashMap[]{nomes},5);
+
+/*        map.put("Thiago", 20);
         map.put("Gustavo", 16);
         map.put("Augusto", 17);
         System.out.println(map.get("Gustavo"));
@@ -16,6 +19,6 @@ public class Main {
 
 
 
-        System.out.println(" ");
+        System.out.println(" ");*/
     }
 }
