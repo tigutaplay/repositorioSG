@@ -1,10 +1,42 @@
-import java.util.Scanner;
+import java.math.BigDecimal;
+import java.sql.SQLOutput;
+import java.util.*;
 
 public class Saque implements Caixa {
     Scanner scanner = new Scanner(System.in);
     private float valor;
     private float valorFixo;
     int[] cedulas = new int[13];
+/*    private BigDecimal[] cedlas = {BigDecimal.valueOf(200.00),
+            BigDecimal.valueOf(100.00),
+            BigDecimal.valueOf(50.00),
+            BigDecimal.valueOf(20.00),
+            BigDecimal.valueOf(10.00),
+            BigDecimal.valueOf(5.00),
+            BigDecimal.valueOf(2.00),
+            BigDecimal.valueOf(1.00),
+            BigDecimal.valueOf(0.50),
+            BigDecimal.valueOf(0.25),
+            BigDecimal.valueOf(0.10),
+            BigDecimal.valueOf(0.05),
+            BigDecimal.valueOf(0.01),
+    };*/
+
+    private float[] cedlas = {200.00f,
+            100.00f,
+            50.00f,
+            20.00f,
+            10.00f,
+            5.00f,
+            2.00f,
+            1.00f,
+            0.50f,
+            0.25f,
+            0.10f,
+            0.05f,
+            0.01f,
+    };
+
 
     public float getValor() {
         return valor;
@@ -22,46 +54,27 @@ public class Saque implements Caixa {
         this.valorFixo = valorFixo;
     }
 
-    private void filtro() {
-        do {
-            if (this.getValor() >= 200) {
-                this.setValor(this.getValor() - 200);
-                this.cedulas[0] + 1;
-            } else if (this.getValor() >= 100) {
-                this.setValor(this.getValor() - 100);
-                this.cedulas[1] + 1;
-            } else {
-                //System.out.println(this.getValor());
-                this.setValor(0);
-            }
-        } while(this.getValor() > 0);
-    }
 
     @Override
     public void insereirValor() {
         System.out.println("Inserir valor a ser sacado: ");
         this.setValor(scanner.nextFloat());
         this.setValorFixo(this.getValor());
-        filtro();
-    }
+        System.out.println("Valor do saque : " + this.getValorFixo());
+        for (int i = 0; i < cedlas.length; i++) {
+            do {
+                if (this.valor >= cedlas[i]) {
+                    this.setValor(this.getValor() - cedlas[i]);
+                    this.cedulas[i]++;
+                }
+            } while (this.valor >= cedlas[i]);
+            if (this.cedulas[i] > 0) {
+                System.out.println("Cedulas de " + cedlas[i] + ": " + cedulas[i]);
+            }
+        }
 
-    @Override
-    public void sacar() {
-        System.out.print("Valor do saque: ");
-        System.out.println(this.getValorFixo());
-        System.out.println(this.getValor());
-        System.out.println("Cedulas de 200.: " + this.getCedulasDe200());
-        System.out.println("Cedulas de 100.: " + this.getCedulasDe100());
-        System.out.println("Cedulas de 50..: " + this.getCedulasDe50());
-        System.out.println("Cedulas de 20..: " + this.getCedulasDe20());
-        System.out.println("Cedulas de 10..: " + this.getCedulasDe10());
-        System.out.println("Cedulas de 5...: " + this.getCedulasDe5());
-        System.out.println("Cedulas de 2...: " + this.getCedulasDe2());
-        System.out.println("Cedulas de 1...: " + this.getCedulasDe1());
-        System.out.println("Cedulas de 0,50: " + this.getCedulasDe050());
-        System.out.println("Cedulas de 0,25: " + this.getCedulasDe025());
-        System.out.println("Cedulas de 0,10: " + this.getCedulasDe010());
-        System.out.println("Cedulas de 0,05: " + this.getCedulasDe005());
-        System.out.println("Cedulas de 0,01: " + this.getCedulasDe001());
+//        for (BigDecimal cedula: cedlas) {
+//
+//        }
     }
 }

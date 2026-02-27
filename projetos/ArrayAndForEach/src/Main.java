@@ -21,7 +21,7 @@ public class Main {
 //            System.out.println(letra);
 //        }
 
-        String[] nomes = new String[5];
+        String[] nomes = {"A", "B", "C", "D", "E"};
 
         nomes[0] = "A";
         nomes[1] = "B";
@@ -33,9 +33,12 @@ public class Main {
             System.out.println(nomes[i] + num[i]);
         }
 
-//        for (String nome: nomes) {
-//            System.out.println(nome);
-//        }
+        for (String nome: nomes) {
+            System.out.println(nome);
+            if (nome != "A") {
+                System.out.println("NA");
+            }
+        }
 
     }
 }

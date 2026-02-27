@@ -7,18 +7,16 @@ public class Main {
 
         HashMap<String, Integer> nomes = new LinkedHashMap<>();
 
-        Arrays.fill(new HashMap[]{nomes},5);
-
-/*        map.put("Thiago", 20);
-        map.put("Gustavo", 16);
-        map.put("Augusto", 17);
-        System.out.println(map.get("Gustavo"));
-        System.out.println(map.get("Thiago"));
-        map.remove("Thiago");
-        System.out.println(map.get("Thiago"));
+        nomes.put("Thiago", 20);
+        nomes.put("Gustavo", 16);
+        nomes.put("Augusto", 17);
+        System.out.println(nomes.get("Gustavo"));
+        System.out.println(nomes.get("Thiago"));
+        nomes.remove("Thiago");
+        System.out.println(nomes.get("Thiago"));
 
 
 
-        System.out.println(" ");*/
+        System.out.println(" ");
     }
 }
