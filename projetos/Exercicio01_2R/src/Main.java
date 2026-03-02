@@ -1,6 +1,6 @@
 public class Main {
     public static void main(String[] args) {
-        Saque s = new Saque();
-        s.insereirValor();
+        Saque saque = new Saque();
+        saque.sacar();
     }
 }
