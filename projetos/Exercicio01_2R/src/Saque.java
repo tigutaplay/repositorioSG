@@ -1,12 +1,13 @@
-import java.math.BigDecimal;
-import java.sql.SQLOutput;
-import java.util.*;
+import java.util.Arrays;
+import java.util.Scanner;
 
 public class Saque implements Caixa {
     Scanner scanner = new Scanner(System.in);
     private float valor;
     private float valorFixo;
     int[] cedulas = new int[13];
+    int[] qCedulas = {5,5,5,5,5,5,5,5,5,5,5,5,5};
+
 /*    private BigDecimal[] cedlas = {BigDecimal.valueOf(200.00),
             BigDecimal.valueOf(100.00),
             BigDecimal.valueOf(50.00),
@@ -37,6 +38,7 @@ public class Saque implements Caixa {
             0.01f,
     };
 
+
     public float getValor() {
         return valor;
     }
@@ -62,14 +64,19 @@ public class Saque implements Caixa {
         System.out.println("Valor do saque : " + this.getValorFixo());
         for (int i = 0; i < cedlas.length; i++) {
             do {
-                if (this.valor >= cedlas[i]) {
+                if (this.valor >= cedlas[i] && this.qCedulas[i] > 0) {
                     this.setValor(this.getValor() - cedlas[i]);
                     this.cedulas[i]++;
+                    this.qCedulas[i]--;
                 }
-            } while (this.valor >= cedlas[i]);
+            } while (this.valor >= cedlas[i] && this.qCedulas[i] > 0);
             if (this.cedulas[i] > 0) {
-                System.out.println("Cedulas de " + cedlas[i] + ": " + cedulas[i]);
+                System.out.println("Cedulas de " + cedlas[i] + " enviadas : " + cedulas[i]);
             }
+        }
+        System.out.println("---------------------------");
+        for (int i = 0; i < cedlas.length; i++) {
+            System.out.println("Cedulas de " + cedlas[i] + " restantes : " + qCedulas[i]);
         }
 
 //        for (BigDecimal cedula: cedlas) {
