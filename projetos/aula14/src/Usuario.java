@@ -17,6 +17,6 @@ public class Usuario extends Pessoa {
     }
 
     public void viuMaisUm() {
-
+        totAssistido++;
     }
 }

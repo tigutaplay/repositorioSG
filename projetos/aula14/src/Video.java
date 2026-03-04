@@ -26,7 +26,7 @@ public class Video implements AcoesVideo {
     }
 
     public void setAvaliacao(float avaliacao) {
-        this.avaliacao = avaliacao;
+        this.avaliacao = (int) (this.avaliacao + avaliacao)/ this.views;
     }
 
     public int getViews() {
@@ -76,12 +76,7 @@ public class Video implements AcoesVideo {
     @Override
     public void like() {
         curtidas++;
-        redefinirAvaliacao();
         System.out.println("Like adicionado");
-    }
-
-    private void redefinirAvaliacao() {
-        avaliacao = (float) views / curtidas;
     }
 
     @Override
