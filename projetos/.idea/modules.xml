@@ -2,25 +2,26 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/03/03.iml" filepath="$PROJECT_DIR$/03/03.iml" />
-      <module fileurl="file://$PROJECT_DIR$/ArrayAndForEach/ArrayAndForEach.iml" filepath="$PROJECT_DIR$/ArrayAndForEach/ArrayAndForEach.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Exercicio01/Exercicio01.iml" filepath="$PROJECT_DIR$/Exercicio01/Exercicio01.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Exercicio01R/Exercicio01R.iml" filepath="$PROJECT_DIR$/Exercicio01R/Exercicio01R.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Exercicio01_2/Exercicio01_2.iml" filepath="$PROJECT_DIR$/Exercicio01_2/Exercicio01_2.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Exercicio01_2R/Exercicio01_2R.iml" filepath="$PROJECT_DIR$/Exercicio01_2R/Exercicio01_2R.iml" />
-      <module fileurl="file://$PROJECT_DIR$/MapTests/MapTests.iml" filepath="$PROJECT_DIR$/MapTests/MapTests.iml" />
-      <module fileurl="file://$PROJECT_DIR$/aula04/aula04.iml" filepath="$PROJECT_DIR$/aula04/aula04.iml" />
-      <module fileurl="file://$PROJECT_DIR$/aula05/aula05.iml" filepath="$PROJECT_DIR$/aula05/aula05.iml" />
-      <module fileurl="file://$PROJECT_DIR$/aula06/aula06.iml" filepath="$PROJECT_DIR$/aula06/aula06.iml" />
-      <module fileurl="file://$PROJECT_DIR$/aula07/aula07.iml" filepath="$PROJECT_DIR$/aula07/aula07.iml" />
-      <module fileurl="file://$PROJECT_DIR$/aula09/aula09.iml" filepath="$PROJECT_DIR$/aula09/aula09.iml" />
-      <module fileurl="file://$PROJECT_DIR$/aula10/aula10.iml" filepath="$PROJECT_DIR$/aula10/aula10.iml" />
-      <module fileurl="file://$PROJECT_DIR$/aula11/aula11.iml" filepath="$PROJECT_DIR$/aula11/aula11.iml" />
-      <module fileurl="file://$PROJECT_DIR$/aula12/aula12.iml" filepath="$PROJECT_DIR$/aula12/aula12.iml" />
-      <module fileurl="file://$PROJECT_DIR$/aula13/aula13.iml" filepath="$PROJECT_DIR$/aula13/aula13.iml" />
-      <module fileurl="file://$PROJECT_DIR$/aula14/aula14.iml" filepath="$PROJECT_DIR$/aula14/aula14.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Testes/ArrayAndForEach/ArrayAndForEach.iml" filepath="$PROJECT_DIR$/Testes/ArrayAndForEach/ArrayAndForEach.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Exercicios/Exercicio01/Exercicio01.iml" filepath="$PROJECT_DIR$/Exercicios/Exercicio01/Exercicio01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Exercicios/Exercicio01R/Exercicio01R.iml" filepath="$PROJECT_DIR$/Exercicios/Exercicio01R/Exercicio01R.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Exercicios/Exercicio01_2/Exercicio01_2.iml" filepath="$PROJECT_DIR$/Exercicios/Exercicio01_2/Exercicio01_2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Exercicios/Exercicio01_2R/Exercicio01_2R.iml" filepath="$PROJECT_DIR$/Exercicios/Exercicio01_2R/Exercicio01_2R.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Exercicios/Exercicio02/Exercicio02.iml" filepath="$PROJECT_DIR$/Exercicios/Exercicio02/Exercicio02.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Testes/MapTests/MapTests.iml" filepath="$PROJECT_DIR$/Testes/MapTests/MapTests.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Aulas/aula03/aula03.iml" filepath="$PROJECT_DIR$/Aulas/aula03/aula03.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Aulas/aula04/aula04.iml" filepath="$PROJECT_DIR$/Aulas/aula04/aula04.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Aulas/aula05/aula05.iml" filepath="$PROJECT_DIR$/Aulas/aula05/aula05.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Aulas/aula06/aula06.iml" filepath="$PROJECT_DIR$/Aulas/aula06/aula06.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Aulas/aula07/aula07.iml" filepath="$PROJECT_DIR$/Aulas/aula07/aula07.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Aulas/aula09/aula09.iml" filepath="$PROJECT_DIR$/Aulas/aula09/aula09.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Aulas/aula10/aula10.iml" filepath="$PROJECT_DIR$/Aulas/aula10/aula10.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Aulas/aula11/aula11.iml" filepath="$PROJECT_DIR$/Aulas/aula11/aula11.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Aulas/aula12/aula12.iml" filepath="$PROJECT_DIR$/Aulas/aula12/aula12.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Aulas/aula13/aula13.iml" filepath="$PROJECT_DIR$/Aulas/aula13/aula13.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Aulas/aula14/aula14.iml" filepath="$PROJECT_DIR$/Aulas/aula14/aula14.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/projetos.iml" filepath="$PROJECT_DIR$/.idea/projetos.iml" />
-      <module fileurl="file://$PROJECT_DIR$/teste/teste.iml" filepath="$PROJECT_DIR$/teste/teste.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Testes/teste/teste.iml" filepath="$PROJECT_DIR$/Testes/teste/teste.iml" />
     </modules>
   </component>
 </project>
