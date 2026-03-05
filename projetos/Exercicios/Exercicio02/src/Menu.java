@@ -3,8 +3,10 @@ import java.util.Scanner;
 
 public class Menu {
     private Scanner scanner = new Scanner(System.in);
-    private int opcao;
     Conta conta = new Conta();
+    Transacoes transacoes = new Transacoes();
+    private int opcao;
+    public boolean menuAtivo = true;
 
     public void menu() {
         System.out.println("-------MENU--------");
@@ -15,27 +17,23 @@ public class Menu {
         System.out.println("5  Depositar");
         System.out.println("6  Sair");
         System.out.print("Opção: ");
-        setOpcao(scanner());
+        setOpcao(conta.intScanner());
     }
 
     public void seguirOpcao() {
         if (opcao == 1) {
             conta.criarConta();
         } else if (opcao == 2) {
-
+            conta.fecharConta();
         } else if (opcao == 3) {
-
+            transacoes.transferir();
         } else if (opcao == 4) {
-
+            transacoes.sacar();
         } else if (opcao == 5) {
-
+            transacoes.depositar();
         } else {
-
+            setMenuAtivo(false);
         }
-    }
-
-    private int scanner() {
-        return scanner.nextInt();
     }
 
     public int getOpcao() {
@@ -44,5 +42,13 @@ public class Menu {
 
     public void setOpcao(int opcao) {
         this.opcao = opcao;
+    }
+
+    public boolean isMenuAtivo() {
+        return menuAtivo;
+    }
+
+    public void setMenuAtivo(boolean menuAtivo) {
+        this.menuAtivo = menuAtivo;
     }
 }

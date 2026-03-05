@@ -3,98 +3,80 @@ import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Scanner;
 
-public class Conta extends Dados {
-    Scanner scanner = new Scanner(System.in);
-    HashMap<Integer, Integer> idParaAgencia = new LinkedHashMap<>();
-    HashMap<Integer, String> idParaNome = new LinkedHashMap<>();
-    HashMap<Integer, Integer> idParaSaldo = new LinkedHashMap<>();
-    HashMap<Integer, Integer> idParaStatus = new LinkedHashMap<>();
+public class Conta {
+    private Scanner scanner = new Scanner(System.in);
+    public static HashMap<Integer, Integer> idParaAgencia = new LinkedHashMap<>();
+    public static HashMap<Integer, String> idParaNome = new LinkedHashMap<>();
+    public static HashMap<Integer, Integer> idParaConta = new LinkedHashMap<>();
+    public static HashMap<Integer, BigDecimal> idParaSaldo = new LinkedHashMap<>();
+    public static HashMap<Integer, Integer> idParaStatus = new LinkedHashMap<>();
     private static int contador = 1;
-    private int id;
 
-    /*private int numeroAgencia;
-    private String nomeTitular;
-    private BigDecimal saldo;
-    private boolean status;*/
-
-    /*public Conta(int numeroAgencia, int numeroConta, String nomeTitular) {
-        setNumeroAgencia(numeroAgencia);
-        setNumeroConta(numeroConta);
-        setNomeTitular(nomeTitular);
-        setSaldo(BigDecimal.valueOf(0));
-        setStatus(true);
-        System.out.println("Conta aberta!");
-    }*/
-
-
-    private String stringScaner() {
+    private String stringScanner() {
         return scanner.next();
     }
 
-    private int intScaner() {
+    public int intScanner() {
         return scanner.nextInt();
+    }
+
+    private boolean confirmacaoScanner() {
+        System.out.print("[1]Sim [0]Não: ");
+        int valor = scanner.nextInt();
+        if (valor == 1) {
+            return true;
+        } else if (valor == 0){
+            return false;
+        } else {
+            confirmacaoScanner();
+            return false;
+        }
     }
 
     public void criarConta() {
         System.out.print("Número da agencia: ");
-        idParaAgencia.put(contador, intScaner());
+        idParaAgencia.put(contador, intScanner());
+
         System.out.print("Nome do titular: ");
-        idParaNome.put(contador, stringScaner());
-        setId(contador);
-        System.out.print("Número da conta: " + contador);
-        idParaSaldo.put(contador, 0);
+        idParaNome.put(contador, stringScanner());
+
+        System.out.println("Número da conta: " + contador);
+        idParaConta.put(contador, contador);
+        idParaSaldo.put(contador, BigDecimal.valueOf(0));
         idParaStatus.put(contador++, 1);
     }
 
-    /*public void fecharConta() {
-        if (getSaldo().compareTo(BigDecimal.ZERO) == 0) {
-            setStatus(false);
-            System.out.println("Conta fechada!");
-        } else if (getSaldo().compareTo(BigDecimal.ZERO) > 0) {
-            System.out.println("Operação inválida! Ainda há dinheiro na conta");
-        } else {
-            System.out.println("Operação inválida! Conta em débito");
+    public void fecharConta() {
+        int idConta = identificarConta();
+        if (idConta != 0) {
+            System.out.println("Conta de número " + idParaConta.get(idConta) + " do usuário " + idParaNome.get(idConta));
+            System.out.println("Confirmar fechamento da conta?");
+            if (confirmacaoScanner()) {
+                if (idParaSaldo.get(idConta).compareTo(BigDecimal.ZERO) == 0) {
+                    idParaAgencia.remove(idConta);
+                    idParaNome.remove(idConta);
+                    idParaConta.remove(idConta);
+                    idParaSaldo.remove(idConta);
+                    idParaStatus.remove(idConta);
+                    System.out.println("Conta fechada!");
+                } else if (idParaSaldo.get(idConta).compareTo(BigDecimal.ZERO) > 0) {
+                    System.out.println("Operação inválida! Ainda há dineiro na conta!");
+                }
+            } else {
+                System.out.println("Fechamento cancelado!");
+            }
         }
-    }*/
-
-    public int getId() {
-        return id;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public int identificarConta() {
+        System.out.print("Número da conta: ");
+        Integer idConta = intScanner();
+        if (idParaConta.containsKey(idConta)) {
+            return idConta;
+        } else {
+            System.out.println("Conta não encontrada!");
+            return 0;
+        }
     }
 
-    /*public int getNumeroAgencia() {
-        return numeroAgencia;
-    }
-
-    public void setNumeroAgencia(int numeroAgencia) {
-        this.numeroAgencia = numeroAgencia;
-    }
-
-
-    public String getNomeTitular() {
-        return nomeTitular;
-    }
-
-    public void setNomeTitular(String nomeTitular) {
-        this.nomeTitular = nomeTitular;
-    }
-
-    public BigDecimal getSaldo() {
-        return saldo;
-    }
-
-    public void setSaldo(BigDecimal saldo) {
-        this.saldo = saldo;
-    }
-
-    public boolean isStatus() {
-        return status;
-    }
-
-    public void setStatus(boolean status) {
-        this.status = status;
-    }*/
 }
