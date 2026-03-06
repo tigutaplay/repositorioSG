@@ -1,12 +1,9 @@
-import java.math.BigDecimal;
 import java.util.Scanner;
 
 public class Menu {
-    private Scanner scanner = new Scanner(System.in);
-    Conta conta = new Conta();
-    Transacoes transacoes = new Transacoes();
     private int opcao;
     public boolean menuAtivo = true;
+    Transacoes transacoes = new Transacoes();
 
     public void menu() {
         System.out.println("-------MENU--------");
@@ -17,14 +14,14 @@ public class Menu {
         System.out.println("5  Depositar");
         System.out.println("6  Sair");
         System.out.print("Opção: ");
-        setOpcao(conta.intScanner());
+        opcao = Scanners.intScanner();
     }
 
     public void seguirOpcao() {
         if (opcao == 1) {
-            conta.criarConta();
+            Banco.adicionarConta();
         } else if (opcao == 2) {
-            conta.fecharConta();
+            Banco.removerConta();
         } else if (opcao == 3) {
             transacoes.transferir();
         } else if (opcao == 4) {
@@ -32,19 +29,11 @@ public class Menu {
         } else if (opcao == 5) {
             transacoes.depositar();
         } else {
-            if (conta.confirmacaoScanner()) {
+            if (Scanners.confirmacaoScanner()) {
                 System.out.println("Programa encerrado!");
                 setMenuAtivo(false);
             }
         }
-    }
-
-    public int getOpcao() {
-        return opcao;
-    }
-
-    public void setOpcao(int opcao) {
-        this.opcao = opcao;
     }
 
     public boolean isMenuAtivo() {
