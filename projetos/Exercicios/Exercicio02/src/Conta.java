@@ -9,7 +9,7 @@ public class Conta {
     public static HashMap<Integer, String> idParaNome = new LinkedHashMap<>();
     public static HashMap<Integer, Integer> idParaConta = new LinkedHashMap<>();
     public static HashMap<Integer, BigDecimal> idParaSaldo = new LinkedHashMap<>();
-    public static HashMap<Integer, Integer> idParaStatus = new LinkedHashMap<>();
+    public static HashMap<Integer, String> idParaStatus = new LinkedHashMap<>();
     private static int contador = 1;
 
     private String stringScanner() {
@@ -43,7 +43,7 @@ public class Conta {
         System.out.println("Número da conta: " + contador);
         idParaConta.put(contador, contador);
         idParaSaldo.put(contador, BigDecimal.valueOf(0));
-        idParaStatus.put(contador++, 1);
+        idParaStatus.put(contador++, "ativa");
     }
 
     public void fecharConta() {
