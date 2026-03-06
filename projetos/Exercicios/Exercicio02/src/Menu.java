@@ -32,7 +32,10 @@ public class Menu {
         } else if (opcao == 5) {
             transacoes.depositar();
         } else {
-            setMenuAtivo(false);
+            if (conta.confirmacaoScanner()) {
+                System.out.println("Programa encerrado!");
+                setMenuAtivo(false);
+            }
         }
     }
 

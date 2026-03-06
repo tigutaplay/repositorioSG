@@ -20,7 +20,7 @@ public class Conta {
         return scanner.nextInt();
     }
 
-    private boolean confirmacaoScanner() {
+    public boolean confirmacaoScanner() {
         System.out.print("[1]Sim [0]Não: ");
         int valor = scanner.nextInt();
         if (valor == 1) {
